@@ -18,7 +18,7 @@ struct LandmarksPage: View {
                 Text("Landmarks")
                     .font(.largeTitle)
                     .fontWeight(.semibold)
-                    .padding(.bottom, 550.0)
+                    .padding(.bottom, 10.0)
                 
                 HStack{
                     Button("Touristy") {
@@ -26,23 +26,59 @@ struct LandmarksPage: View {
                     }
                     .buttonStyle(.borderedProminent)
                     .tint(.asparagus)
+                    .padding()
 
-                    Button("Local Spots") {
+                    Button("Local") {
                         /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Action@*/ /*@END_MENU_TOKEN@*/
                     }
                     .buttonStyle(.borderedProminent)
                     .tint(.asparagus)
+                    .padding()
 
                     Button("Waterfront") {
-                        /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Action@*/ /*@END_MENU_TOKEN@*/
+                            
                     }
                     .buttonStyle(.borderedProminent)
                     .tint(.asparagus)
-                    
+                    .padding()
                 }//HStack end
-                
+            
+                HStack{
+                    Image("GGBridge")
+                        .resizable(resizingMode: .stretch)
+                        .aspectRatio(contentMode: .fit)
+                        .cornerRadius(10)
+                        .frame(width: 200, height: 100)
+                        .clipped()
+                        .shadow(color: .black.opacity(0.5), radius: 10, x: 5, y: 4)
+                    Image("FishermansWharf")
+                        .resizable(resizingMode: .stretch)
+                        .aspectRatio(contentMode: .fit)
+                        .cornerRadius(10)
+                        .frame(width: 200, height: 100)
+                        .clipped()
+                        .shadow(color: .black.opacity(0.5), radius: 10, x: 5, y: 4)
+                      
+                }//Hstack end
+                .padding()
+
+                HStack{
+                    Image("PaintedLadies")
+                        .resizable(resizingMode: .stretch)
+                        .aspectRatio(contentMode: .fit)
+                        .cornerRadius(10)
+                        .frame(width: 200, height: 100)
+                        .shadow(color: .black.opacity(0.5), radius: 10, x: 5, y: 4)
+                    Image("CoitTower")
+                        .resizable(resizingMode: .stretch)
+                        .aspectRatio(contentMode: .fit)
+                        .cornerRadius(10)
+                        .frame(width: 200, height: 100)
+                        .shadow(color: .black.opacity(0.7), radius: 10, x: 5, y: 4)
+                        
+                }//hstack end
             }//VStack end
-        }//ZStack end
+        }//ZStack
     }//body end
 }//struct end,
 
