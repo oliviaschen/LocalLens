@@ -9,9 +9,42 @@ import SwiftUI
 
 struct LandmarksPage: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-    }
-}
+        ZStack{
+            Color("GreenYellow")
+                .ignoresSafeArea()
+                .padding(.top, 50.0)
+                
+            VStack{
+                Text("Landmarks")
+                    .font(.largeTitle)
+                    .fontWeight(.semibold)
+                    .padding(.bottom, 550.0)
+                
+                HStack{
+                    Button("Touristy") {
+                        /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Action@*/ /*@END_MENU_TOKEN@*/
+                    }
+                    .buttonStyle(.borderedProminent)
+                    .tint(.asparagus)
+
+                    Button("Local Spots") {
+                        /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Action@*/ /*@END_MENU_TOKEN@*/
+                    }
+                    .buttonStyle(.borderedProminent)
+                    .tint(.asparagus)
+
+                    Button("Waterfront") {
+                        /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Action@*/ /*@END_MENU_TOKEN@*/
+                    }
+                    .buttonStyle(.borderedProminent)
+                    .tint(.asparagus)
+                    
+                }//HStack end
+                
+            }//VStack end
+        }//ZStack end
+    }//body end
+}//struct end,
 
 #Preview {
     LandmarksPage()
