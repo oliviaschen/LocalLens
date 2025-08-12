@@ -2,22 +2,39 @@ import SwiftUI
 
 struct ActivitiesPage: View {
     var body: some View {
-        ZStack(alignment: .top) {
+        // holds all views
+        ZStack {
             // background color
             Color.asparagus
                 .ignoresSafeArea()
-            // activity title
-            Text("Activities")
-            
-            
-            //first activity section
             VStack {
-                Text("Conservatory of Flowers")
-            }//end VStack
-            .background(Rectangle().frame(width: 350.0, height: 150.0).foregroundColor(Color.greenYellow).cornerRadius(30))
-            //?: idk why this is needed? If taken out, everythign gets displaced
-            .frame(maxWidth: .infinity, maxHeight: .infinity)
+                // activity title
+                Text("Activities")
+                Spacer()
+            }
+            //note: cornerRadius must go before padding so that padding applies to the view AND the corners
+            
+            VStack(spacing:200){
+                HStack {
+                    Text("Conservatory of Flowers")
+                }
+                .background(Rectangle().fill(Color.greenYellow).cornerRadius(30).padding().frame(width:400, height:230))
+            
+                HStack {
+                    Text("Exploratorium")
+                }
+                .background(Rectangle().fill(Color.greenYellow).cornerRadius(30).padding().frame(width:400, height:230))
+                
+                HStack {
+                    VStack {
+                        Text("Japanese Tea Garden")
+                    }
+                }
+                .background(Rectangle().fill(Color.greenYellow).cornerRadius(30).padding().frame(width:400, height:230))
+                
+            }
 
+            
         }//end ZStack
         // main content stack (other views go here)
     }//end body
