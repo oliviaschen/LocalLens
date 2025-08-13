@@ -35,6 +35,16 @@ private let demoPins: [PlacePin] = [
           coordinate: .init(latitude: 37.78568, longitude: -122.41318)),
     .init(title: "House of Prime Rib", subtitle: "Serves classic, juicy prime rib with traditional sides—perfect for a hearty, old-school San Francisco dining experience.", price: "$50-100", category: .food,
           coordinate: .init(latitude: 37.79343, longitude: -122.42274)),
+    .init(title: "La Taqueria", subtitle: "Famous for its Mission-style burritos and flavorful tacos—perfect for a satisfying, no-frills Mexican meal.", price: "$10-20", category: .food,
+          coordinate: .init(latitude: 37.75088, longitude: -122.41818)),
+    .init(title: "The Italian Homemade Company", subtitle: "Offers fresh, house-made pasta and hearty Italian dishes—perfect for a cozy, authentic meal.", price: "$10-20", category: .food,
+          coordinate: .init(latitude: 37.80161, longitude: -122.41173)),
+    .init(title: "Crab House at Pier 39", subtitle: "Known for its sizzling garlic crab and fresh seafood—perfect for a flavorful waterfront meal.", price: "$50-100", category: .food,
+          coordinate: .init(latitude: 37.80946, longitude: -122.41042)),
+    .init(title: "Mitchell's Ice Cream", subtitle: "Beloved for its rich, handmade ice cream in classic and tropical flavors—perfect for a sweet, nostalgic treat.", price: "$", category: .food,
+          coordinate: .init(latitude: 37.74422, longitude: -122.42279)),
+    .init(title: "Ghirardelli Chocolate Experience", subtitle: "Features rich sundaes, decadent chocolates, and signature hot fudge—perfect for indulging in a San Francisco classic.", price: "$$", category: .food,
+          coordinate: .init(latitude: 37.76429, longitude: -122.43061)),
 ]
 
 // ---- Map view (no live location yet) ----
