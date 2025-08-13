@@ -1,50 +1,77 @@
 import SwiftUI
+import SwiftData
 
 struct ActivitiesPage: View {
+    @State private var Activities:[Activity] = [
+        Activity(name: "Exploratorium", imageName: "Exploratorium", desc: "One of the top, most interactive science museums in the U.S."),
+        Activity(name: "Conservatory Of Flowers", imageName:"ConservatoryOfFlowers", desc: "A beautiful garden with a wide variety of plants from all over the world."),
+        Activity(name: "Japantown", imageName:"Japantown", desc: "A great shopping center, full of bustling shops and Japanese culture.")
+    ]
     var body: some View {
+        Text("Activities")
         // holds all views
-        ZStack {
-            // background color
-            Color.asparagus
-                .ignoresSafeArea()
-            VStack {
-                // activity title
-                Text("Activities")
-                Spacer()
-            }
-            //note: cornerRadius must go before padding so that padding applies to the view AND the corners
-            
-            VStack(spacing:200){
-                // SECT 1
-                VStack {
-                    HStack {
-                        Text("Conservatory of Flowers")
-                        // padding centers the title to the top left of the section. Note that I decrease padding from the top rather than add padding to the bottom because of the spacing between sections (my preference)
-                            .padding(EdgeInsets(top:-80, leading:-140, bottom:0, trailing:0))
-                    }
-                }//end SECT 1
-                .background(Rectangle().fill(Color.greenYellow).cornerRadius(30).padding().frame(width:400, height:230))
-            
-                HStack {
-                    Text("Exploratorium")
-                }
-                .background(Rectangle().fill(Color.greenYellow).cornerRadius(30).padding().frame(width:400, height:230))
-                
-                HStack {
-                    VStack {
-                        Text("Japanese Tea Garden")
-                    }
-                }
-                .background(Rectangle().fill(Color.greenYellow).cornerRadius(30).padding().frame(width:400, height:230))
-                
-            }
+        ScrollView { // Creates a vertically scrollable area by default
+            VStack (spacing:30){ // Arranges content vertically
+                ForEach(0..<Activities.count) { index in
+                    //every view in this ZStack I think of as a new layer, like on ibispaintx
+                    ZStack {
+                        // Section background
+                        Rectangle().fill(Color.greenYellow)
+                            .cornerRadius(30)
+                        
+                        //Image(s)
+                        HStack {
+                            Image(Activities[index].imageName)
+                                .resizable(capInsets: EdgeInsets(), resizingMode: .stretch)
+                                .aspectRatio(contentMode: .fill)
+                                .frame(width:0, height: 90.0)
+                        }
+                        .padding(EdgeInsets(top:-100, leading:0, bottom:0, trailing:0))
+                        //brings the image up and to the left
+                        
+                        //Title
+                        HStack {
+                            Text(Activities[index].name)
+                                .font(.title2)
+                                .fontWeight(.bold)
+                            //makes the title go all the way to the left
+                            Spacer()
+                        }//end Hstack
+                        // makes the text go down
+                        .padding(EdgeInsets(top:40, leading:0, bottom:0, trailing:0))
+                        // makes the text a little away from the edge.
+                        .padding(.horizontal)
+                        
+                        //Cost and District
+                        HStack {
+                            Text("District reean")
+                                .font(.footnote)
+                            Text("$$$$")
+                            Spacer()
+                        }
+                        .padding(.horizontal)
+                        .padding(EdgeInsets(top:100, leading:0, bottom:0, trailing:0))
+//                        .font(.caption)
+                        
+                        
+                        //Description
+                        Text(Activities[index].desc)
+                            .padding(EdgeInsets(top:190, leading:0, bottom:0, trailing:0))
+                            .padding(.horizontal)
+                            
+                    }//end ZStack
+                    .padding(.horizontal)
+                    .frame(width:400, height:250)//makes boxes
+                }//end for each loop
+            }//end Vstack
+            .padding()
+        }//end ScrollView
+            .background(Color.asparagus)
+//        .background(Color.gray.opacity(0.1)) //to view boundaries
+    }
+}
 
-            
-        }//end ZStack
-        // main content stack (other views go here)
-    }//end body
-}//end struct
-
+//preview screen
 #Preview {
     ActivitiesPage()
 }
