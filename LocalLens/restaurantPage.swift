@@ -38,9 +38,36 @@ struct restaurantPage: View {
                         .padding()
                         .font(.title)
                         .foregroundColor(Color("caribbeanCurrent"))
-                    RoundedRectangle(cornerRadius: 20).foregroundColor(.asparugusGreen)
-                        .frame(width:375, height:185)
-                        .padding()
+                    
+                    ZStack{
+                        RoundedRectangle(cornerRadius: 20).foregroundColor(.asparugusGreen)
+                            .frame(width:375, height:185)
+                            .padding()
+                        
+                        VStack {
+                            Spacer()
+                            HStack {
+                                Spacer()
+                                Image(.goldenBoyPizza)
+                                    .renderingMode(.original)
+                                    .resizable()
+                                    .frame(width: 150, height:150)
+                                    .aspectRatio(contentMode: .fill)
+                                    .cornerRadius(15)
+                                    .padding()
+                                
+                                Text("Golden Boy Pizza: Pizza Restaurant - 542 Green St, San Francisco          (TAKE OUT ONLY)")
+                                    .font(.headline)
+                                    .fontWeight(.heavy)
+                                    .foregroundColor(Color("greenYellow"))
+                                    .padding()
+                                Spacer()
+                            }//end HStack
+                            Spacer()
+                        }//end VStack
+                       
+                        
+                    }//end ZStack
                     
                     Text("Cafes & Drinks")
                         .fontWeight(.semibold)
@@ -48,45 +75,104 @@ struct restaurantPage: View {
                         .font(.title)
                         .foregroundColor(Color("caribbeanCurrent"))
                     ZStack{
-                        
                         RoundedRectangle(cornerRadius: 20).foregroundColor(.asparugusGreen)
                             .frame(width:375, height:185)
                             .padding()
+                        
                         VStack {
+                            Spacer()
                             HStack {
+                                Spacer()
                                 Image(.goldenIsland)
                                     .renderingMode(.original)
                                     .resizable()
-                                    .frame(width: 100, height:100)
+                                    .frame(width: 150, height:150)
                                     .aspectRatio(contentMode: .fill)
                                     .cornerRadius(15)
                                     .padding()
-
+                                
+                                Text("Golden Island Cafe: Chinese dessert and drink cafe - 1300 Noriega St, San Francisco")
+                                    .font(.headline)
+                                    .fontWeight(.heavy)
+                                    .foregroundColor(Color("greenYellow"))
+                                    .padding()
                                 Spacer()
-                            }//end Hstack
+                            }//end HStack
                             Spacer()
                         }//end VStack
-
                     }//end ZStack
                     
                     
-                    Text("Inexpensive")
+                    Text("Seafood")
                         .fontWeight(.semibold)
                         .padding()
                         .font(.title)
                         .foregroundColor(Color("caribbeanCurrent"))
-                    RoundedRectangle(cornerRadius: 20).foregroundColor(.asparugusGreen)
-                        .frame(width:375, height:185)
-                        .padding()
+                    
+                    ZStack{
+                        RoundedRectangle(cornerRadius: 20).foregroundColor(.asparugusGreen)
+                            .frame(width:375, height:185)
+                            .padding()
+                        
+                        VStack {
+                            Spacer()
+                            HStack {
+                                Spacer()
+                                Image(.crabHousePier39)
+                                    .renderingMode(.original)
+                                    .resizable()
+                                    .frame(width: 150, height:150)
+                                    .aspectRatio(contentMode: .fill)
+                                    .cornerRadius(15)
+                                    .padding()
+                                
+                                Text("Crab House: Sea food - 2 Beach St, Pier 39, San Francisco")
+                                    .font(.headline)
+                                    .fontWeight(.heavy)
+                                    .foregroundColor(Color("greenYellow"))
+                                    .padding()
+                                Spacer()
+                            }//end HStack
+                            Spacer()
+                        }//end VStack
+                       
+                        
+                    }//end ZStack
                     
                     Text("Bakeries")
                         .fontWeight(.semibold)
                         .padding()
                         .font(.title)
                         .foregroundColor(Color("caribbeanCurrent"))
-                    RoundedRectangle(cornerRadius: 20).foregroundColor(.asparugusGreen)
-                        .frame(width:375, height:185)
-                        .padding()
+                    ZStack{
+                        RoundedRectangle(cornerRadius: 20).foregroundColor(.asparugusGreen)
+                            .frame(width:375, height:185)
+                            .padding()
+                        
+                        VStack {
+                            Spacer()
+                            HStack {
+                                Spacer()
+                                Image(.bPatiserrieSF)
+                                    .renderingMode(.original)
+                                    .resizable()
+                                    .frame(width: 150, height:150)
+                                    .aspectRatio(contentMode: .fill)
+                                    .cornerRadius(15)
+                                    .padding()
+                                
+                                Text("b. Patisserie: French and Viennese style pastry kitchen - 2821 California St, San Francisco")
+                                    .font(.headline)
+                                    .fontWeight(.heavy)
+                                    .foregroundColor(Color("greenYellow"))
+                                    .padding()
+                                Spacer()
+                            }//end HStack
+                            Spacer()
+                        }//end VStack
+                       
+                        
+                    }//end ZStack
                 }//end VStack
             }//end ScrollView
             }//end Zstack
