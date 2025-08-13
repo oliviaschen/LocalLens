@@ -6,8 +6,13 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		BD88E47A2E4D0F2700F953E5 /* mapPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD88E4792E4D0F2700F953E5 /* mapPage.swift */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		BD6129582E4BBB89005B28BB /* LocalLens.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LocalLens.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BD88E4792E4D0F2700F953E5 /* mapPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mapPage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -32,6 +37,7 @@
 		BD61294F2E4BBB89005B28BB = {
 			isa = PBXGroup;
 			children = (
+				BD88E4792E4D0F2700F953E5 /* mapPage.swift */,
 				BD61295A2E4BBB89005B28BB /* LocalLens */,
 				BD6129592E4BBB89005B28BB /* Products */,
 			);
@@ -119,6 +125,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BD88E47A2E4D0F2700F953E5 /* mapPage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
