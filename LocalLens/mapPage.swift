@@ -3,8 +3,8 @@ import MapKit
 
 // ---- Inline models so this compiles by itself ----
 enum PlaceCategory: String, CaseIterable, Hashable {
-    case food, activity, landmark
-    var color: Color { switch self { case .food: .red; case .activity: .blue; case .landmark: .green } }
+    case food, activity, landmark, park, tourist
+    var color: Color { switch self { case .food: .red; case .activity: .blue; case .landmark: .purple; case .tourist: .yellow; case .park: .green } }
 }
 
 struct PlacePin: Identifiable {
@@ -45,6 +45,52 @@ private let demoPins: [PlacePin] = [
           coordinate: .init(latitude: 37.74422, longitude: -122.42279)),
     .init(title: "Ghirardelli Chocolate Experience", subtitle: "Features rich sundaes, decadent chocolates, and signature hot fudge—perfect for indulging in a San Francisco classic.", price: "$$", category: .food,
           coordinate: .init(latitude: 37.76429, longitude: -122.43061)),
+    .init(title: "Golden Gate Bridge",
+              subtitle: "Iconic red suspension bridge offering scenic views and walking paths across the bay.",
+              price: "Free",
+              category: .landmark,
+              coordinate: .init(latitude: 37.8199, longitude: -122.4783)),
+
+        .init(title: "Golden Gate Park",
+              subtitle: "Expansive urban park with gardens, trails, museums, and a peaceful atmosphere.",
+              price: "Free",
+              category: .park,
+              coordinate: .init(latitude: 37.7694, longitude: -122.4862)),
+    .init(title: "Fisherman's Wharf",
+              subtitle: "Bustling waterfront district famous for seafood, sea lions, shops, and scenic bay views.",
+              price: "$",
+              category: .tourist,
+              coordinate: .init(latitude: 37.8080, longitude: -122.4177)),
+
+        .init(title: "Painted Ladies",
+              subtitle: "Historic Victorian homes with a scenic view of the SF skyline, especially from Alamo Square.",
+              price: "Free",
+              category: .landmark,
+              coordinate: .init(latitude: 37.7760, longitude: -122.4325)),
+    .init(title: "Coit Tower",
+          subtitle: "Historic tower atop Telegraph Hill offering panoramic views and Depression-era murals.",
+          price: "$10 for adults",
+          category: .landmark,
+          coordinate: .init(latitude: 37.8024, longitude: -122.4058)),
+
+    .init(title: "Oracle Park",
+          subtitle: "Waterfront baseball stadium, home to the San Francisco Giants, with scenic views and a lively atmosphere.",
+          price: "Varies by event",
+          category: .tourist,
+          coordinate: .init(latitude: 37.7786, longitude: -122.3893)),
+
+    .init(title: "16th Avenue Tiled Steps",
+          subtitle: "Colorful mosaic stairway featuring community art and great city views—an Instagram-worthy hidden gem.",
+          price: "Free",
+          category: .landmark,
+          coordinate: .init(latitude: 37.7561, longitude: -122.4730)),
+
+    .init(title: "Sutro Baths",
+          subtitle: "Ruins of a historic bathhouse by the ocean, now part of the Lands End coastal trail with sweeping views.",
+          price: "Free",
+          category: .landmark,
+          coordinate: .init(latitude: 37.7802, longitude: -122.5130)),
+
 ]
 
 // ---- Map view (no live location yet) ----
