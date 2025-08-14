@@ -11,6 +11,14 @@ struct Homepage: View {
 
     var body: some View {
         VStack {
+            Text("")
+            Text("")
+            Text("")
+            Text("")
+            Text("")
+            Text("")
+            Text("")
+            Text("")
             Image("Logo")
                 .resizable()
                 .scaledToFit()
@@ -27,6 +35,7 @@ struct Homepage: View {
                 .padding(.leading, 20)
 
             Spacer()
+            
         }
         // make the hamburger tappable (Button), not just an Image
         .overlay(alignment: .topLeading) {
@@ -56,6 +65,8 @@ struct Homepage: View {
             case .restaurants:  restaurantPage()
             }
         }
+        .background(Color("GreenYellow")) // 👈 background color here
+        .ignoresSafeArea()
     }
 }
 
