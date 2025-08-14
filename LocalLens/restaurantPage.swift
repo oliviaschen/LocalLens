@@ -415,6 +415,7 @@ struct restaurantPage: View {
                         }//end VStack
                     }//end ZStack
                 }//end VStack
+                
             }//end ScrollView
             }//end Zstack
             
