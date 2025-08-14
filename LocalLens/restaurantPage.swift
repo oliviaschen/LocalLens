@@ -7,8 +7,25 @@
 
 import SwiftUI
 
+struct HeartButton: View {
+    @State private var isFilled = false
+    
+    var body: some View {
+        Image(systemName: isFilled ? "heart.fill" : "heart")
+            .resizable()
+            .foregroundColor(.caribbeanCurrent)
+            .frame(width: 27, height: 25)
+            .background(Color("asparagusGreen"))
+            .onTapGesture {
+                withAnimation(.spring()) {
+                    isFilled.toggle()
+                }
+            }
+    }
+}
+
 struct restaurantPage: View {
-    @State private var isClicked = false
+    
     var body: some View {
         ZStack{
             Color(.greenYellow)
@@ -48,17 +65,9 @@ struct restaurantPage: View {
                         VStack{
                             HStack(alignment: .top, spacing: 10.0){
                                 Spacer()
-                                Image(systemName: isClicked ? "heart.fill" : "heart")
-                                    .resizable()
-                                    .foregroundColor(Color("caribbeanCurrent"))
-                                    .frame(width: 25, height: 20)
-                                    .background(Color("asparagusGreen"))
-                                    .padding(25)
-                                    .onTapGesture {
-                                        withAnimation(.spring()) {//This adds an animation when clicked
-                                            self.isClicked.toggle()
-                                        }//end withAnimation
-                                    }//end .onTapGesture
+                                HeartButton()
+                                    .position(x:250, y: 35)
+                                
                                 Image(.chatGPTImageAug132025124759PM)
                                     .resizable()
                                     .foregroundColor(Color("caribbeanCurrent"))
@@ -84,7 +93,7 @@ struct restaurantPage: View {
                                 Text("Golden Boy Pizza: Pizza Restaurant - 542 Green St, San Francisco          (TAKE OUT ONLY)")
                                     .font(.headline)
                                     .fontWeight(.heavy)
-                                    .foregroundColor(Color("greenYellow"))
+                                    .foregroundColor(Color("GreenYellow"))
                                     .padding()
                                 Spacer()
                             }//end HStack
@@ -107,17 +116,9 @@ struct restaurantPage: View {
                     VStack{
                         HStack(alignment: .top, spacing: 10.0){
                             Spacer()
-                            Image(systemName: isClicked ? "heart.fill" : "heart")
-                                .resizable()
-                                .foregroundColor(Color("caribbeanCurrent"))
-                                .frame(width: 25, height: 20)
-                                .background(Color("asparagusGreen"))
-                                .padding(25)
-                                .onTapGesture {
-                                    withAnimation(.spring()) {//This adds an animation when clicked
-                                        self.isClicked.toggle()
-                                    }//end withAnimation
-                                }//end .onTapGesture
+                            HeartButton()
+                                .position(x:250, y: 35)
+                            
                             Image(.chatGPTImageAug132025122733PM)
                                 .resizable()
                                 .frame(width: 35, height:25)
@@ -137,13 +138,10 @@ struct restaurantPage: View {
                                     .aspectRatio(contentMode: .fill)
                                     .cornerRadius(15)
                                     .padding()
-                                
-                               
-                                
                                 Text("Golden Island Cafe: Chinese dessert and drink cafe - 1300 Noriega St, San Francisco")
                                     .font(.headline)
                                     .fontWeight(.heavy)
-                                    .foregroundColor(Color("greenYellow"))
+                                    .foregroundColor(Color("GreenYellow"))
                                     .padding()
                                 Spacer()
                             }//end HStack
@@ -166,17 +164,9 @@ struct restaurantPage: View {
                         VStack{
                             HStack(alignment: .top, spacing: 10.0){
                                 Spacer()
-                                Image(systemName: isClicked ? "heart.fill" : "heart")
-                                    .resizable()
-                                    .foregroundColor(Color("caribbeanCurrent"))
-                                    .frame(width: 25, height: 20)
-                                    .background(Color("asparagusGreen"))
-                                    .padding(25)
-                                    .onTapGesture {
-                                        withAnimation(.spring()) {//This adds an animation when clicked
-                                            self.isClicked.toggle()
-                                        }//end withAnimation
-                                    }//end .onTapGesture
+                                HeartButton()
+                                    .position(x:250, y: 35)
+                                
                                 Image(.chatGPTImageAug132025125221PM)
                                     .resizable()
                                     .frame(width: 40, height:30)
@@ -200,7 +190,7 @@ struct restaurantPage: View {
                                 Text("Crab House: Sea food - 2 Beach St, Pier 39, San Francisco")
                                     .font(.headline)
                                     .fontWeight(.heavy)
-                                    .foregroundColor(Color("greenYellow"))
+                                    .foregroundColor(Color("GreenYellow"))
                                     .padding()
                                 Spacer()
                             }//end HStack
@@ -223,17 +213,9 @@ struct restaurantPage: View {
                         VStack{
                             HStack(alignment: .top, spacing: 10.0){
                                 Spacer()
-                                Image(systemName: isClicked ? "heart.fill" : "heart")
-                                    .resizable()
-                                    .foregroundColor(Color("caribbeanCurrent"))
-                                    .frame(width: 25, height: 20)
-                                    .background(Color("asparagusGreen"))
-                                    .padding(25)
-                                    .onTapGesture {
-                                        withAnimation(.spring()) {//This adds an animation when clicked
-                                            self.isClicked.toggle()
-                                        }//end withAnimation
-                                    }//end .onTapGesture
+                                HeartButton()
+                                    .position(x:250, y: 35)
+                                
                                 Image(.chatGPTImageAug132025122733PM)
                                     .resizable()
                                     .frame(width: 35, height:25)
@@ -257,7 +239,7 @@ struct restaurantPage: View {
                                 Text("b. Patisserie: French and Viennese style pastry kitchen - 2821 California St, San Francisco")
                                     .font(.headline)
                                     .fontWeight(.heavy)
-                                    .foregroundColor(Color("greenYellow"))
+                                    .foregroundColor(Color("GreenYellow"))
                                     .padding()
                                 Spacer()
                             }//end HStack
