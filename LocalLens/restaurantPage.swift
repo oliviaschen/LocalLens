@@ -1,12 +1,10 @@
 //
-//  restaurantPage.swift
-//  LocalLens
+// restaurantPage.swift
+// LocalLens
 //
-//  Created by Scholar on 8/12/25.
+// Created by Scholar on 8/12/25.
 //
-
 import SwiftUI
-
 struct HeartButton: View {
     @State private var isFilled = false
     
@@ -32,26 +30,15 @@ struct restaurantPage: View {
                 .ignoresSafeArea()
             ScrollView {
                 VStack(alignment: .leading, spacing: 0.0) {
-                    HStack{
-                        
-                        Image(.threeLinesMenuSymbol)
-                            .renderingMode(.original)
-                            .resizable()
-                            .frame(width:35, height:35)
-
-                            .aspectRatio(contentMode: .fill)
-                            .padding(30)
-                        
-                        HStack{
-                            
+                    HStack {
+                        Text("                      ")//This text is used to make the "Restaurant" in the middle
                             Text("Restaurants")
                                 .font(.largeTitle)
                                 .fontWeight(.semibold)
                                 .foregroundColor(Color("caribbeanCurrent"))
                                 .padding()
                         }//end HStack
-                        
-                    }//end HStack
+                    
                     Text("Popular")
                         .fontWeight(.semibold)
                         .padding()
@@ -59,7 +46,7 @@ struct restaurantPage: View {
                         .foregroundColor(Color("caribbeanCurrent"))
                     
                     ZStack{
-                        RoundedRectangle(cornerRadius: 20).foregroundColor(.asparugusGreen)
+                        RoundedRectangle(cornerRadius: 20).foregroundColor(.asparagus)
                             .frame(width:375, height:185)
                             .padding()
                         
@@ -105,7 +92,7 @@ struct restaurantPage: View {
                     }//end ZStack
                     
                     ZStack{
-                        RoundedRectangle(cornerRadius: 20).foregroundColor(.asparugusGreen)
+                        RoundedRectangle(cornerRadius: 20).foregroundColor(.asparagus)
                             .frame(width:375, height:185)
                             .padding()
                         
@@ -153,7 +140,7 @@ struct restaurantPage: View {
                         .font(.title)
                         .foregroundColor(Color("caribbeanCurrent"))
                     ZStack{
-                        RoundedRectangle(cornerRadius: 20).foregroundColor(.asparugusGreen)
+                        RoundedRectangle(cornerRadius: 20).foregroundColor(.asparagus)
                             .frame(width:375, height:185)
                             .padding()
                         
@@ -194,7 +181,7 @@ struct restaurantPage: View {
                     }//end ZStack
                     
                     ZStack{
-                        RoundedRectangle(cornerRadius: 20).foregroundColor(.asparugusGreen)
+                        RoundedRectangle(cornerRadius: 20).foregroundColor(.asparagus)
                             .frame(width:375, height:185)
                             .padding()
                         VStack{
@@ -242,7 +229,7 @@ struct restaurantPage: View {
                         .foregroundColor(Color("caribbeanCurrent"))
                     
                     ZStack{
-                        RoundedRectangle(cornerRadius: 20).foregroundColor(.asparugusGreen)
+                        RoundedRectangle(cornerRadius: 20).foregroundColor(.asparagus)
                             .frame(width:375, height:185)
                             .padding()
                         
@@ -286,7 +273,7 @@ struct restaurantPage: View {
                     }//end ZStack
                     
                     ZStack{
-                        RoundedRectangle(cornerRadius: 20).foregroundColor(.asparugusGreen)
+                        RoundedRectangle(cornerRadius: 20).foregroundColor(.asparagus)
                             .frame(width:375, height:185)
                             .padding()
                         VStack{
@@ -332,7 +319,7 @@ struct restaurantPage: View {
                         .font(.title)
                         .foregroundColor(Color("caribbeanCurrent"))
                     ZStack{
-                        RoundedRectangle(cornerRadius: 20).foregroundColor(.asparugusGreen)
+                        RoundedRectangle(cornerRadius: 20).foregroundColor(.asparagus)
                             .frame(width:375, height:185)
                             .padding()
                         
@@ -375,7 +362,7 @@ struct restaurantPage: View {
                         
                     }//end ZStack
                     ZStack{
-                        RoundedRectangle(cornerRadius: 20).foregroundColor(.asparugusGreen)
+                        RoundedRectangle(cornerRadius: 20).foregroundColor(.asparagus)
                             .frame(width:375, height:185)
                             .padding()
                         VStack{
@@ -421,7 +408,8 @@ struct restaurantPage: View {
             
     }//end body
 }//end struck
-
 #Preview {
-    restaurantPage()
+  restaurantPage()
 }
+
+

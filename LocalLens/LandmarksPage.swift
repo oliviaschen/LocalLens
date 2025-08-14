@@ -213,7 +213,7 @@ struct LandmarksPage: View {
         var body: some View {
             ZStack {
                 RoundedRectangle(cornerRadius: 15)
-                    .fill(Color("Asparagus"))
+                    .fill(Color("asparagusGreen"))
                     .padding(.horizontal, 20)
                     .shadow(color: .black.opacity(0.5), radius: 10, x: 5, y: 4)
                 
@@ -227,7 +227,7 @@ struct LandmarksPage: View {
                     
                     HStack {
                         Text(landmark.name)
-                            .font(.headline)
+                            .font(.title3)
                             .foregroundColor(.white)
                             .lineLimit(1)
                             .padding(.leading, 30.0)
