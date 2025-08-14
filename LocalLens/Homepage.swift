@@ -60,6 +60,11 @@ struct Homepage: View {
     }
   }
 }
+
+
+struct Homepage: View {
+}
+
 #Preview {
   NavigationStack { Homepage() } // preview inside a stack is safer
 }

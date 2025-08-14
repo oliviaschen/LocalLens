@@ -150,4 +150,7 @@ var body: some View {
 
 #Preview {
  MapPage()
+
 }
+private let demoPins: [PlacePin] = [
+

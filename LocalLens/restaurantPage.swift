@@ -1,12 +1,10 @@
 //
-//  restaurantPage.swift
-//  LocalLens
+// restaurantPage.swift
+// LocalLens
 //
-//  Created by Scholar on 8/12/25.
+// Created by Scholar on 8/12/25.
 //
-
 import SwiftUI
-
 struct HeartButton: View {
     @State private var isFilled = false
     
@@ -410,7 +408,8 @@ struct restaurantPage: View {
             
     }//end body
 }//end struck
-
 #Preview {
-    restaurantPage()
+  restaurantPage()
 }
+
+
