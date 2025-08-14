@@ -227,7 +227,7 @@ struct LandmarksPage: View {
                     
                     HStack {
                         Text(landmark.name)
-                            .font(.title)
+                            .font(.title3)
                             .foregroundColor(.white)
                             .lineLimit(1)
                             .padding(.leading, 30.0)
