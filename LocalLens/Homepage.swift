@@ -25,7 +25,7 @@ struct Homepage: View {
                     .font(.system(size: 45, weight: .bold))
                     .padding()
 
-                Text("Discover the best places to eat, explore, and enjoy—right where you are.")
+                Text("Discover the best places to eat, explore, and enjoy—right where you are!")
                     .italic()
                     .font(.system(size: 22))
                     .frame(maxWidth: .infinity, alignment: .center)
