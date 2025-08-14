@@ -93,6 +93,22 @@ private let demoPins: [PlacePin] = [
           coordinate: .init(latitude: 37.78044, longitude: -122.51365)),
     .init(title: "Golden Gate Park", subtitle: "A sprawling urban park with gardens, museums, and trails—perfect for outdoor activities and sightseeing.", price: "Free", category: .activity,
           coordinate: .init(latitude: 37.76892, longitude: -122.48298)),
+    .init(title: "Fort Point", subtitle: "A historic Civil War–era fort beneath the Golden Gate Bridge—perfect for history buffs and stunning bridge views.", price: "Parking",   category: .landmark,
+          coordinate: .init(latitude: 37.81061, longitude: -122.47709)),
+    .init(title: "Crissy Field East Beach", subtitle: "Offers sandy shores, picnic spots, and Golden Gate Bridge views—perfect for relaxing or water sports.", price: "Parking",   category: .activity,
+          coordinate: .init(latitude: 37.80643, longitude: -122.45069)),
+    .init(title: "Golden Gate Overlook", subtitle: "Offers one of the best panoramic views of the Golden Gate Bridge—perfect for photos and sightseeing.", price: "Parking",   category: .landmark,
+          coordinate: .init(latitude: 37.80397, longitude: -122.47668)),
+    .init(title: "Baker Beach", subtitle: "Offers scenic shoreline views of the Golden Gate Bridge—perfect for picnics, sunsets, and beach walks.", price: "Free",   category: .activity,
+          coordinate: .init(latitude: 37.79357, longitude: -122.48364)),
+    .init(title: "Battery Spencer", subtitle: "Fort Baker 19th-century concrete battery featuring panoramic views of Golden Gate & San Fransisco.", price: "Free",   category: .activity,
+          coordinate: .init(latitude: 37.82776, longitude: -122.48167)),
+    .init(title: "Alcatraz Island", subtitle: "Features the historic former prison, gardens, and bay views—perfect for history and sightseeing.", price: "$45 (ferry ticket)",   category: .landmark,
+          coordinate: .init(latitude: 37.82693, longitude: -122.42294)),
+    .init(title: "San Fransisco Botanical Garden", subtitle: "Showcases plants from around the world in beautiful themed gardens—perfect for a peaceful stroll.", price: "$13",   category: .activity,
+          coordinate: .init(latitude: 37.76771, longitude: -122.46931)),
+    .init(title: "Muir Woods National Monument", subtitle: "Showcases plants from around the world in beautiful themed gardens—perfect for a peaceful stroll.", price: "$15 (plus parking or shuttle fee)",   category: .activity,
+          coordinate: .init(latitude: 37.89702, longitude: -122.58112)),
 ]
 
 // ---- Map view (no live location yet) ----
