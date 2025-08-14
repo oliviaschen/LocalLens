@@ -32,15 +32,15 @@ struct restaurantPage: View {
                     }//end HStack
 
                 }//end HStack
-                RoundedRectangle(cornerRadius: 20).foregroundColor(.asparugusGreen)
+                RoundedRectangle(cornerRadius: 20).foregroundColor(.asparagusGreen)
                     .frame(width:375, height:185)
                     .padding()
         
-                RoundedRectangle(cornerRadius: 20).foregroundColor(.asparugusGreen)
+                RoundedRectangle(cornerRadius: 20).foregroundColor(.asparagusGreen)
                     .frame(width:375, height:185)
                     .padding()
                 
-                RoundedRectangle(cornerRadius: 20).foregroundColor(.asparugusGreen)
+                RoundedRectangle(cornerRadius: 20).foregroundColor(.asparagusGreen)
                     .frame(width:375, height:185)
                     .padding()
             }//end VStack
