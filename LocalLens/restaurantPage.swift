@@ -32,26 +32,15 @@ struct restaurantPage: View {
                 .ignoresSafeArea()
             ScrollView {
                 VStack(alignment: .leading, spacing: 0.0) {
-                    HStack{
-                        
-                        Image(.threeLinesMenuSymbol)
-                            .renderingMode(.original)
-                            .resizable()
-                            .frame(width:35, height:35)
-
-                            .aspectRatio(contentMode: .fill)
-                            .padding(30)
-                        
-                        HStack{
-                            
+                    HStack {
+                        Text("                      ")//This text is used to make the "Restaurant" in the middle
                             Text("Restaurants")
                                 .font(.largeTitle)
                                 .fontWeight(.semibold)
                                 .foregroundColor(Color("caribbeanCurrent"))
                                 .padding()
                         }//end HStack
-                        
-                    }//end HStack
+                    
                     Text("Popular")
                         .fontWeight(.semibold)
                         .padding()
