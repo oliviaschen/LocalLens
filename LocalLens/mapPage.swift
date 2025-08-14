@@ -95,13 +95,13 @@ private let demoPins: [PlacePin] = [
  .init(title: "Crissy Field East Beach", subtitle: "Offers sandy shores, picnic spots, and Golden Gate Bridge views—perfect for relaxing or water sports.", price: "Free", category: .activity,
    coordinate: .init(latitude: 37.81061, longitude: -122.47709)),
 ]
-
 // ---- Map view (no live location yet) ----
 struct MapPage: View {
  @State private var camera: MapCameraPosition =
   .region(.init(center: .init(latitude: 37.7749, longitude: -122.4194),
       span: .init(latitudeDelta: 0.08, longitudeDelta: 0.08)))
  @State private var selected: PlacePin? = nil
+
 var body: some View {
   Map(position: $camera) {
    ForEach(demoPins) { pin in
@@ -147,10 +147,6 @@ var body: some View {
   }
  }
 }
-
 #Preview {
  MapPage()
-
 }
-private let demoPins: [PlacePin] = [
-

@@ -71,7 +71,7 @@ struct LandmarksPage: View {
                                 selectedFilter = filter
                             }
                             .buttonStyle(.borderedProminent)
-                            .tint(.asparagusGreen)
+                            .tint(.asparagus)
                             .foregroundColor(.white)
                         }
                     } // end of HStack
