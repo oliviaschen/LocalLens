@@ -1,7 +1,7 @@
 import SwiftUI
 
 enum Destination: String, Hashable, Identifiable {
-    case landmarks, restaurants, map
+    case landmarks, restaurants, map, activities
     var id: Self { self }
 }
 
@@ -53,6 +53,7 @@ struct Homepage: View {
                 Button("Map")         { goTo = .map }
                 Button("Landmarks")   { goTo = .landmarks }
                 Button("Restaurants") { goTo = .restaurants }
+                Button("Activities") { goTo = .activities}
                 Button("Cancel", role: .cancel) {}
             }
             .navigationDestination(item: $goTo) { dest in
@@ -60,6 +61,7 @@ struct Homepage: View {
                 case .landmarks:   LandmarksPage()
                 case .restaurants: restaurantPage()   // keep your existing view name
                 case .map:         MapPage()
+                case .activities:        ActivitiesPage()
                 }
             }
             // ⬆️⬆️ keep them attached to VStack (inside the stack)

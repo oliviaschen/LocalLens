@@ -147,7 +147,7 @@ var body: some View {
     }
   }
 }
-#Preview { MapPage() }
+
 #Preview {
   MapPage()
 }
