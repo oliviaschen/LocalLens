@@ -69,7 +69,7 @@ struct restaurantPage: View {
                                 HeartButton()
                                     .position(x:250, y: 35)
                                 
-                                Image(.chatGPTImageAug132025124759PM)
+                                Image(".chatGPTImageAug132025124759PM")
                                     .resizable()
                                     .foregroundColor(Color("caribbeanCurrent"))
                                     .frame(width: 17, height:25)
