@@ -2,8 +2,8 @@ import SwiftUI
 import SwiftData
 struct ActivitiesPage: View {
   @State private var activities:[Activity] = [
-    Activity(name: "Exploratorium", imageName: "Exploratorium", desc: "One of the top, most interactive science museums in the U.S.", costRange:2, district: "Embaracdero"),
-    Activity(name: "Conservatory Of Flowers", imageName:"ConservatoryOfFlowers", desc: "A beautiful garden with a wide variety of plants from all over the world.", costRange:3, district: "Golden Gate Park"),
+    Activity(name: "Exploratorium", imageName: "Exploratorium", desc: "One of the top, most interactive science museums in the U.S.", costRange:2, district: "Embarcadero"),
+    Activity(name: "Conservatory of Flowers", imageName:"ConservatoryOfFlowers", desc: "A beautiful garden with a wide variety of plants from all over the world.", costRange:3, district: "Golden Gate Park"),
     Activity(name: "Japantown", imageName:"Japantown", desc: "A great shopping center, full of bustling shops and Japanese culture.", costRange:2, district: "Japantown"),
     Activity(name: "16th Ave Tiled Steps", imageName:"", desc: "A beautiful hiking area with a breathtaking view awaiting at the top!", costRange:0, district: "Midtown Terrace"),
     Activity(name: "Lands End | Sutro Baths", imageName:"", desc: "Gorgeous views, ocean waves, and an intimate setting.", costRange:0, district: "Sutro Heights"),
@@ -13,7 +13,9 @@ struct ActivitiesPage: View {
     ZStack {
       VStack {
         Text("Activities")
-          .font(.title)
+              .font(.largeTitle)
+              .fontWeight(.bold)
+              .foregroundColor(Color("caribbeanCurrent"))
         // holds all views
         ScrollView { // Creates a vertically scrollable area by default
           VStack (spacing:30){ // Arranges content vertically
@@ -52,7 +54,9 @@ struct ActivitiesPage: View {
                   Text(activity.name)
                     .font(.title2)
                     .fontWeight(.bold)
+                    .foregroundColor(Color("GreenYellow"))
                   //makes the title go all the way to the left and like button go all the way to the right
+                    
                   Spacer()
                   // BUTTON
                   //action: when the button is tapped..
@@ -61,7 +65,7 @@ struct ActivitiesPage: View {
                     print("Liked \(activity.name): \(activity.isLiked)") // Optional debug
                   }) {
                     Image(systemName: activity.isLiked ? "heart.fill" : "heart") // Conditional heart icon
-                      .foregroundColor(activity.isLiked ? .red : .black)     // Color change
+                      .foregroundColor(activity.isLiked ? .red : .white)     // Color change
                       .font(.title2)
                   }
                 }//end Hstack
@@ -72,8 +76,12 @@ struct ActivitiesPage: View {
                 //Cost and District
                 HStack {
                   Text(activity.district)
-                    .font(.footnote)
-                  Text(activity.costDisplay)
+                        .font(.footnote)
+                        .fontWeight(.light)
+                        .foregroundColor(Color("GreenYellow"))
+                    Text(activity.costDisplay)
+                        .fontWeight(.light)
+                        .foregroundColor(Color("GreenYellow"))
                   Spacer()
                 }
                 .padding(.horizontal)
@@ -81,7 +89,10 @@ struct ActivitiesPage: View {
                 //Description
                 HStack {
                   Text(activity.desc)
-                    .font(.footnote)
+                        .font(.footnote)
+                        .fontWeight(.light)
+                        .foregroundColor(Color("GreenYellow"))
+                    
                 }//end HStack
                 .padding(.horizontal)
                 .padding(EdgeInsets(top:170, leading:0, bottom:0, trailing:0))
