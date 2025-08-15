@@ -34,7 +34,7 @@ struct restaurantPage: View {
                         Text("                      ")//This text is used to make the "Restaurant" in the middle
                             Text("Restaurants")
                                 .font(.largeTitle)
-                                .fontWeight(.semibold)
+                                .fontWeight(.bold)
                                 .foregroundColor(Color("caribbeanCurrent"))
                                 .padding()
                         }//end HStack
@@ -333,6 +333,7 @@ struct restaurantPage: View {
                                     .resizable()
                                     .frame(width: 35, height:25)
                                     .padding(25)
+                                    
                             }//end HStack
                             Spacer(minLength: 20.0)
                         }//end VStack

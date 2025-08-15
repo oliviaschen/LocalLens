@@ -61,9 +61,9 @@ struct LandmarksPage: View {
                 VStack {
                     Text("Landmarks")
                         .font(.largeTitle)
-                        .fontWeight(.semibold)
+                        .fontWeight(.bold)
                         .padding(.top, 75.0)
-                        .foregroundColor(.white)
+                        .foregroundColor(.caribbeanCurrent)
                     
                     HStack {
                         ForEach(["All", "Touristy", "Local", "Waterfront"], id: \.self) { filter in
@@ -72,7 +72,7 @@ struct LandmarksPage: View {
                             }
                             .buttonStyle(.borderedProminent)
                             .tint(.asparagus)
-                            .foregroundColor(.white)
+                            .foregroundColor(.greenYellow)
                         }
                     } // end of HStack
                     .padding()
@@ -213,7 +213,7 @@ struct LandmarksPage: View {
         var body: some View {
             ZStack {
                 RoundedRectangle(cornerRadius: 15)
-                    .fill(Color("asparagusGreen"))
+                    .fill(Color("Asparagus"))
                     .padding(.horizontal, 20)
                     .shadow(color: .black.opacity(0.5), radius: 10, x: 5, y: 4)
                 
@@ -228,7 +228,8 @@ struct LandmarksPage: View {
                     HStack {
                         Text(landmark.name)
                             .font(.title3)
-                            .foregroundColor(.white)
+                            .fontWeight(.medium)
+                            .foregroundColor(.greenYellow)
                             .lineLimit(1)
                             .padding(.leading, 30.0)
                         
